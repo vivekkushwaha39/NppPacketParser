@@ -1,0 +1,9 @@
+﻿Build started 10-12-2018 02:05:01.
+     1>Project "C:\Users\vivek_\Documents\Visual Studio 2010\Projects\NPPPacketParser\NPPPacketParser\projects\2003\PluginTemplate.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\NppPacketParser.lastbuildstate".
+     1>Done Building Project "C:\Users\vivek_\Documents\Visual Studio 2010\Projects\NPPPacketParser\NPPPacketParser\projects\2003\PluginTemplate.vcxproj" (clean target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.17
