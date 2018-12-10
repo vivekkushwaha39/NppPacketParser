@@ -1,4 +1,4 @@
-#include "../includes/XPIPacketParser.h"
+#include "XPIPacketParser.h"
 
 
 XPIPacketParser::XPIPacketParser(void)
