@@ -110,7 +110,7 @@ string XPIPacketParser::getSpacialChrAsStr(string chr)
 	}
 	else 
 	{
-		finalStr = chr;
+		finalStr = chr + " ";
 	}
 
 	return finalStr;

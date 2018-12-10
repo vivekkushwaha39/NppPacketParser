@@ -58,9 +58,8 @@ void commandMenuInit()
     //            ShortcutKey *shortcut,          // optional. Define a shortcut to trigger this command
     //            bool check0nInit                // optional. Make this menu item be checked visually
     //            );
-    setCommand(0, TEXT("Hello Notepad++"), hello, NULL, false);
-    setCommand(1, TEXT("Hello (with dialog)"), helloDlg, NULL, false);
-	setCommand(2, TEXT("Parse XPI packet"), parseXPIPacket, NULL, false); 
+    setCommand(0, TEXT("Parse XPI packet"), parseXPIPacket, NULL, false); 
+	setCommand(1, TEXT("About"), helloDlg, NULL, false);
 }
 
 //
@@ -113,7 +112,7 @@ void hello()
 
 void helloDlg()
 {
-    ::MessageBox(NULL, TEXT("Hello, Notepad++!"), TEXT("Notepad++ Plugin Template"), MB_OK);
+    ::MessageBox(NULL, TEXT("A stupid plugin for packets\nCreated By: Vivek Kushwaha<vivekk4@verifone.com>"), TEXT(""), MB_OK);
 }
 
 void parseXPIPacket()
