@@ -59,7 +59,7 @@ string XPIPacketParser::getAsciiAsStr(char c)
 	int ascii = (int) c;
 	char chr[4];
 	memset(chr, 0, sizeof(chr));
-	sprintf(chr, "%02X", ascii);
+	sprintf(chr, "%02X ", ascii);
 	return string(chr);
 }
 
