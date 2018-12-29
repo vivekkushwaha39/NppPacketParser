@@ -2,6 +2,10 @@
 #include "PluginDefinition.h"
 using namespace std;
 extern NppData nppData;
+using namespace NppPlugin;
+
+HANDLE ScintillaHelper::hModule = NULL;
+
 ScintillaHelper::ScintillaHelper(void)
 {
 }
@@ -10,6 +14,7 @@ ScintillaHelper::ScintillaHelper(void)
 ScintillaHelper::~ScintillaHelper(void)
 {
 }
+
 unsigned char ScintillaHelper::GetSelectedText(string &data)
 {
 	int which = -1;
@@ -37,4 +42,13 @@ unsigned char ScintillaHelper::GetSelectedText(string &data)
 	data = string(buff);
 	delete buff;
 	return 0;
+}
+
+bool ScintillaHelper::OpenFile(const string &fileName)
+{
+
+	bool ret = true;
+	string commandName="C:\\Program Files (x86)\\Notepad++\\notepad++.exe \"" + fileName + "\"";
+	system(commandName.c_str());
+	return  ret;
 }

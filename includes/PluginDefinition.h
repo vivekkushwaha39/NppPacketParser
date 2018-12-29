@@ -21,8 +21,9 @@
 //
 // All difinitions of plugin interface
 //
-#include "../includes/PluginInterface.h"
-#include "../includes/XPIPacketParser.h"
+#include "PluginInterface.h"
+#include "XPIPacketParser.h"
+#include "ScintillaHelper.h"
 //-------------------------------------//
 //-- STEP 1. DEFINE YOUR PLUGIN NAME --//
 //-------------------------------------//
@@ -36,7 +37,7 @@ const TCHAR NPP_PLUGIN_NAME[] = TEXT("XPI Packet Parser");
 //
 // Here define the number of your plugin commands
 //
-const int nbFunc = 2;
+const int nbFunc = 3;
 
 
 //
@@ -66,6 +67,8 @@ void commandMenuCleanUp();
 //
 bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey *sk = NULL, bool check0nInit = false);
 
+// Scintilla helper here
+
 
 //
 // Your plugin command functions
@@ -73,5 +76,5 @@ bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey 
 void hello();
 void helloDlg();
 void parseXPIPacket();
-
+void openBookmarkFile();
 #endif //PLUGINDEFINITION_H

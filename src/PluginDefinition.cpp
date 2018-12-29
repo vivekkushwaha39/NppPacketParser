@@ -14,10 +14,11 @@
 //You should have received a copy of the GNU General Public License
 //along with this program; if not, write to the Free Software
 //Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-
+#include <sstream>
 #include "PluginDefinition.h"
 #include "menuCmdID.h"
-
+#include "DockingFeature\FileBookmarkDialog.h"
+#include "DockingFeature\GoToLineDlg.h"
 //
 // The plugin data that Notepad++ needs
 //
@@ -28,11 +29,16 @@ FuncItem funcItem[nbFunc];
 //
 NppData nppData;
 
+
+
+NppPlugin::ScintillaHelper scintillaHelper;
+
 //
 // Initialize your plugin data here
 // It will be called while plugin loading   
-void pluginInit(HANDLE /*hModule*/)
+void pluginInit(HANDLE hModule)
 {
+	NppPlugin::ScintillaHelper::SethModule(hModule);
 }
 
 //
@@ -60,6 +66,7 @@ void commandMenuInit()
     //            );
     setCommand(0, TEXT("Parse XPI packet"), parseXPIPacket, NULL, false); 
 	setCommand(1, TEXT("About"), helloDlg, NULL, false);
+	setCommand(2, TEXT("Open Filebookmarks"), openBookmarkFile, NULL, false);
 }
 
 //
@@ -153,4 +160,22 @@ void parseXPIPacket()
 
 	::SendMessage(nppData._nppHandle, NPPM_MENUCOMMAND, 0, IDM_FILE_NEW);
 	::SendMessage(curScintilla, SCI_SETTEXT, 0, (LPARAM) finalString.c_str() );
+}
+
+void openBookmarkFile()
+{
+	FileBookmarkDialog *dlg = new FileBookmarkDialog();
+	tTbData dlgData;
+	dlg->init((HINSTANCE) NppPlugin::ScintillaHelper::GethModule(), nppData._nppHandle);
+	dlg->create(&dlgData);
+	dlg->goToCenter();
+	dlg->display();
+
+	wstringstream ss;
+	RECT r;
+	r.top =0 ;
+	r.left = 0;
+	r.bottom =100;
+	r.right =100;
+	//dlg.reSizeTo(r);
 }

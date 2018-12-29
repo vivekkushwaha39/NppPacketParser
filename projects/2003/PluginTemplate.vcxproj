@@ -14,6 +14,7 @@
     <ClInclude Include="..\..\includes\DockingFeature\Docking.h" />
     <ClInclude Include="..\..\includes\DockingFeature\DockingDlgInterface.h" />
     <ClInclude Include="..\..\includes\DockingFeature\dockingResource.h" />
+    <ClInclude Include="..\..\includes\DockingFeature\FileBookmarkDialog.h" />
     <ClInclude Include="..\..\includes\DockingFeature\GoToLineDlg.h" />
     <ClInclude Include="..\..\includes\DockingFeature\resource.h" />
     <ClInclude Include="..\..\includes\DockingFeature\StaticDialog.h" />
@@ -27,6 +28,7 @@
     <ClInclude Include="..\..\includes\Utils.h" />
     <ClInclude Include="..\..\includes\VIPA\VipaParser.h" />
     <ClInclude Include="..\..\includes\XPIPacketParser.h" />
+    <ClInclude Include="..\..\res\resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\res\goLine.rc" />
@@ -38,6 +40,7 @@
     <ClCompile Include="..\..\src\PluginDefinition.cpp" />
     <ClCompile Include="..\..\src\ScintillaHelper.cpp" />
     <ClCompile Include="..\..\src\StaticDialog.cpp" />
+    <ClCompile Include="..\..\src\UI\FileBookmarkDialog.cpp" />
     <ClCompile Include="..\..\src\Utils.cpp" />
     <ClCompile Include="..\..\src\VIPA\VipaParser.cpp" />
     <ClCompile Include="..\..\src\XPIPacketParser.cpp" />
@@ -124,4 +127,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="\Users\vivek_\Documents\Visual Studio 2010\Projects\NPPPacketParser\NPPPacketParser\res\FileBookMark.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

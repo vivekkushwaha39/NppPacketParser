@@ -20,9 +20,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #ifndef DOCKINGDLGINTERFACE_H
 #define DOCKINGDLGINTERFACE_H
 
-#include "StaticDialog.h"
-#include "dockingResource.h"
-#include "Docking.h"
+#include "DockingFeature\StaticDialog.h"
+#include "DockingFeature\dockingResource.h"
+#include "DockingFeature\Docking.h"
 #include <shlwapi.h>
 
 
