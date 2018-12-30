@@ -1,7 +1,7 @@
 // Microsoft Visual C++ generated resource script.
 //
-#include "resource.h"
 #include<Windows.h>
+#include "resource.h"
 /////////////////////////////////////////////////////////////////////////////
 // English (India) resources
 
@@ -41,6 +41,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,205,161,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,259,161,50,14
+    LISTBOX         IDC_LSTBKMK,7,7,302,153,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
 END
 
 
@@ -62,7 +63,7 @@ END
 
 3 TEXTINCLUDE 
 BEGIN
-    "#include \0"
+    "\0"
 END
 
 #endif    // APSTUDIO_INVOKED
@@ -97,13 +98,4 @@ END
 #endif    // English (India) resources
 /////////////////////////////////////////////////////////////////////////////
 
-
-
-#ifndef APSTUDIO_INVOKED
-/////////////////////////////////////////////////////////////////////////////
-//
-// Generated from the TEXTINCLUDE 3 resource.
-//
-/////////////////////////////////////////////////////////////////////////////
-#endif    // not APSTUDIO_INVOKED
 

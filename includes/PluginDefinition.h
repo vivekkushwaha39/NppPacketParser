@@ -37,7 +37,7 @@ const TCHAR NPP_PLUGIN_NAME[] = TEXT("XPI Packet Parser");
 //
 // Here define the number of your plugin commands
 //
-const int nbFunc = 3;
+const int nbFunc = 4;
 
 
 //
@@ -77,4 +77,5 @@ void hello();
 void helloDlg();
 void parseXPIPacket();
 void openBookmarkFile();
+void saveCurrFileAsBookMrk();
 #endif //PLUGINDEFINITION_H

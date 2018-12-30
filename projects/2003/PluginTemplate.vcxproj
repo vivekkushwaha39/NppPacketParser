@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\includes\Conf\FileBookMarkConf.h" />
     <ClInclude Include="..\..\includes\DockingFeature\Docking.h" />
     <ClInclude Include="..\..\includes\DockingFeature\DockingDlgInterface.h" />
     <ClInclude Include="..\..\includes\DockingFeature\dockingResource.h" />
@@ -35,6 +36,7 @@
     <ResourceCompile Include="..\..\res\NppPluginDemo.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Conf\FileBookMarkConf.cpp" />
     <ClCompile Include="..\..\src\GoToLineDlg.cpp" />
     <ClCompile Include="..\..\src\NppPluginDemo.cpp" />
     <ClCompile Include="..\..\src\PluginDefinition.cpp" />

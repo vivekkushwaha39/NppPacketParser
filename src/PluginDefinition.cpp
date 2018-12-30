@@ -67,6 +67,7 @@ void commandMenuInit()
     setCommand(0, TEXT("Parse XPI packet"), parseXPIPacket, NULL, false); 
 	setCommand(1, TEXT("About"), helloDlg, NULL, false);
 	setCommand(2, TEXT("Open Filebookmarks"), openBookmarkFile, NULL, false);
+	setCommand(3, TEXT("Bookmark file"), saveCurrFileAsBookMrk, NULL, false);
 }
 
 //
@@ -168,14 +169,14 @@ void openBookmarkFile()
 	tTbData dlgData;
 	dlg->init((HINSTANCE) NppPlugin::ScintillaHelper::GethModule(), nppData._nppHandle);
 	dlg->create(&dlgData);
+	
 	dlg->goToCenter();
+	dlg->refreshList();
 	dlg->display();
 
-	wstringstream ss;
-	RECT r;
-	r.top =0 ;
-	r.left = 0;
-	r.bottom =100;
-	r.right =100;
-	//dlg.reSizeTo(r);
+}
+
+void saveCurrFileAsBookMrk()
+{
+	FileBookMarkConf::addCurrFile();
 }

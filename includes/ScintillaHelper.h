@@ -16,7 +16,7 @@ namespace NppPlugin
 		bool OpenFile(const std::string &);
 		static HANDLE GethModule(){ return ScintillaHelper::hModule; }
 		static void SethModule(HANDLE _hModule){ ScintillaHelper::hModule = _hModule; }
-
+		static std::wstring GetCurrFullFileName();
 	};
 }
 #endif /* SCINTILLA_HELPER_H */

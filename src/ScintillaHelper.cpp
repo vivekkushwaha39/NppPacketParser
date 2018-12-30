@@ -52,3 +52,11 @@ bool ScintillaHelper::OpenFile(const string &fileName)
 	system(commandName.c_str());
 	return  ret;
 }
+
+wstring ScintillaHelper::GetCurrFullFileName()
+{
+	TCHAR buffer[1024];
+	size_t buffSIZE = 1024;
+	::SendMessage(nppData._nppHandle, NPPM_GETFULLCURRENTPATH, (WPARAM)buffSIZE,(LPARAM) buffer);
+	return wstring(buffer);
+}

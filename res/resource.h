@@ -1156,6 +1156,8 @@
 #define WM_PENWINFIRST                  0x0380
 #define WM_PENWINLAST                   0x038F
 #define WM_DDE_FIRST                    0x03E0
+#define IDC_LIST1                       1000
+#define IDC_LSTBKMK                     1000
 #define CF_GDIOBJLAST                   0x03FF
 #define _WIN32_WINNT_NT4                0x0400
 #define _WIN32_IE_IE40                  0x0400
@@ -1513,7 +1515,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        103
 #define _APS_NEXT_COMMAND_VALUE         40001
-#define _APS_NEXT_CONTROL_VALUE         1000
+#define _APS_NEXT_CONTROL_VALUE         1001
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
