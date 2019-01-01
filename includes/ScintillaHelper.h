@@ -13,7 +13,7 @@ namespace NppPlugin
 		ScintillaHelper(void);
 		~ScintillaHelper(void);
 		unsigned char GetSelectedText(std::string & );
-		bool OpenFile(const std::string &);
+		static bool OpenFile(const std::wstring &);
 		static HANDLE GethModule(){ return ScintillaHelper::hModule; }
 		static void SethModule(HANDLE _hModule){ ScintillaHelper::hModule = _hModule; }
 		static std::wstring GetCurrFullFileName();

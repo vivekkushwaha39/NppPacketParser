@@ -39,6 +39,7 @@ NppPlugin::ScintillaHelper scintillaHelper;
 void pluginInit(HANDLE hModule)
 {
 	NppPlugin::ScintillaHelper::SethModule(hModule);
+	FileBookMarkConf::loadListFromFile();
 }
 
 //
@@ -46,6 +47,11 @@ void pluginInit(HANDLE hModule)
 //
 void pluginCleanUp()
 {
+	bool written = FileBookMarkConf::exitAction();
+	if ( !written )
+	{
+		MessageBox(NULL, L"Unable to write bookmarks", L"Error", MB_OK);
+	}
 }
 
 //

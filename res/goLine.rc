@@ -1,7 +1,7 @@
 // Microsoft Visual C++ generated resource script.
 //
-#include<Windows.h>
 #include "resource.h"
+#include <windows.h>
 /////////////////////////////////////////////////////////////////////////////
 // English (India) resources
 
@@ -41,7 +41,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,205,161,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,259,161,50,14
-    LISTBOX         IDC_LSTBKMK,7,7,302,153,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LSTBKMK,7,7,302,153,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
 END
 
 

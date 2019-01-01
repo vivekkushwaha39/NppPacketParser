@@ -12,6 +12,7 @@ public:
 	virtual ~FileBookmarkDialog(void){};
 	void addItem(std::wstring );
 	void refreshList();
+	int openSelectedFile();
 protected:
 	virtual INT_PTR CALLBACK run_dlgProc(UINT message, WPARAM wParam, LPARAM lParam);
 

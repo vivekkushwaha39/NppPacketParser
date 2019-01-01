@@ -44,13 +44,12 @@ unsigned char ScintillaHelper::GetSelectedText(string &data)
 	return 0;
 }
 
-bool ScintillaHelper::OpenFile(const string &fileName)
+bool ScintillaHelper::OpenFile(const wstring &wfileName)
 {
 
-	bool ret = true;
-	string commandName="C:\\Program Files (x86)\\Notepad++\\notepad++.exe \"" + fileName + "\"";
-	system(commandName.c_str());
-	return  ret;
+	::SendMessage(nppData._nppHandle, NPPM_DOOPEN, (WPARAM) 0, (LPARAM) wfileName.c_str());
+	
+	return  true;
 }
 
 wstring ScintillaHelper::GetCurrFullFileName()
