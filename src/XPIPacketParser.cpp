@@ -76,6 +76,7 @@ void XPIPacketParser::initSplChrMap()
 	splChrMap.insert(make_pair("BEL", 7));
 	splChrMap.insert(make_pair("BS", 8));
 	splChrMap.insert(make_pair("TAB", 9));
+	splChrMap.insert(make_pair("HT", 9));
 	splChrMap.insert(make_pair("LF", 10));
 	splChrMap.insert(make_pair("VT", 11));
 	splChrMap.insert(make_pair("FF", 12));
