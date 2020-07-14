@@ -211,6 +211,15 @@
 #define VFFF_ISSHAREDFILE               0x0001
 #define VFF_CURNEDEST                   0x0001
 #define VIFF_FORCEINSTALL               0x0001
+#define TVS_EX_NOSINGLECOLLAPSE         0x0001
+#define SUBLANG_AZERBAIJANI_AZERBAIJAN_LATIN 0x01
+#define SUBLANG_BANGLA_INDIA            0x01
+#define SUBLANG_CENTRAL_KURDISH_IRAQ    0x01
+#define SUBLANG_CHEROKEE_CHEROKEE       0x01
+#define SUBLANG_HAWAIIAN_US             0x01
+#define SUBLANG_ODIA_INDIA              0x01
+#define SUBLANG_SAKHA_RUSSIA            0x01
+#define SUBLANG_TIGRINYA_ETHIOPIA       0x01
 #define ISOLATIONAWARE_MANIFEST_RESOURCE_ID 2
 #define SW_SHOWMINIMIZED                2
 #define SHOW_ICONWINDOW                 2
@@ -290,6 +299,16 @@
 #define __drv_typeBitset                2
 #define VFF_FILEINUSE                   0x0002
 #define VIFF_DONTDELETEOLD              0x0002
+#define WINAPI_FAMILY_PC_APP            2
+#define SUBLANG_AZERBAIJANI_AZERBAIJAN_CYRILLIC 0x02
+#define SUBLANG_BANGLA_BANGLADESH       0x02
+#define SUBLANG_FULAH_SENEGAL           0x02
+#define SUBLANG_PULAR_SENEGAL           0x02
+#define SUBLANG_PUNJABI_PAKISTAN        0x02
+#define SUBLANG_TAMIL_SRI_LANKA         0x02
+#define SUBLANG_TIGRINYA_ERITREA        0x02
+#define SUBLANG_TSWANA_BOTSWANA         0x02
+#define SUBLANG_VALENCIAN_VALENCIA      0x02
 #define ISOLATIONAWARE_NOSTATICIMPORT_MANIFEST_RESOURCE_ID 3
 #define SW_SHOWMAXIMIZED                3
 #define SW_MAXIMIZE                     3
@@ -322,6 +341,8 @@
 #define SUBLANG_SPANISH_MODERN          0x03
 #define SORT_CHINESE_BOPOMOFO           0x3
 #define __drv_typeExpr                  3
+#define WINAPI_FAMILY_PHONE_APP         3
+#define LANG_VALENCIAN                  0x03
 #define SW_SHOWNOACTIVATE               4
 #define SHOW_OPENNOACTIVATE             4
 #define SW_OTHERUNZOOM                  4
@@ -369,6 +390,9 @@
 #define SORT_JAPANESE_RADICALSTROKE     0x4
 #define SORT_CHINESE_RADICALSTROKE      0x4
 #define VFF_BUFFTOOSMALL                0x0004
+#define WINAPI_FAMILY_SYSTEM            4
+#define ISOLATIONPOLICY_MANIFEST_RESOURCE_ID 4
+#define SUBLANG_TAMAZIGHT_MOROCCO_TIFINAGH 0x04
 #define SW_SHOW                         5
 #define VK_XBUTTON1                     0x05
 #define WM_SIZE                         0x0005
@@ -387,6 +411,8 @@
 #define SUBLANG_GERMAN_LIECHTENSTEIN    0x05
 #define SUBLANG_SAMI_LULE_SWEDEN        0x05
 #define SUBLANG_SPANISH_COSTA_RICA      0x05
+#define WINAPI_FAMILY_SERVER            5
+#define ISOLATIONPOLICY_BROWSER_MANIFEST_RESOURCE_ID 5
 #define SW_MINIMIZE                     6
 #define VK_XBUTTON2                     0x06
 #define WM_ACTIVATE                     0x0006
@@ -402,6 +428,7 @@
 #define SUBLANG_SAMI_SOUTHERN_NORWAY    0x06
 #define SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_LATIN 0x06
 #define SUBLANG_SPANISH_PANAMA          0x06
+#define WINAPI_FAMILY_GAMES             6
 #define SW_SHOWMINNOACTIVE              7
 #define WM_SETFOCUS                     0x0007
 #define WMSZ_BOTTOMLEFT                 7
@@ -565,6 +592,7 @@
 #define HTCLOSE                         20
 #define LANG_NORWEGIAN                  0x14
 #define SUBLANG_SPANISH_PUERTO_RICO     0x14
+#define _SAL_VERSION                    20
 #define VK_KANA                         0x15
 #define VK_HANGEUL                      0x15
 #define VK_HANGUL                       0x15
@@ -655,6 +683,7 @@
 #define VK_SNAPSHOT                     0x2C
 #define WM_MEASUREITEM                  0x002C
 #define LANG_AZERI                      0x2c
+#define LANG_AZERBAIJANI                0x2c
 #define VK_INSERT                       0x2D
 #define WM_DELETEITEM                   0x002D
 #define LANG_BASQUE                     0x2d
@@ -705,12 +734,14 @@
 #define WM_COMMNOTIFY                   0x0044
 #define LANG_TATAR                      0x44
 #define LANG_BENGALI                    0x45
+#define LANG_BANGLA                     0x45
 #define WM_WINDOWPOSCHANGING            0x0046
 #define LANG_PUNJABI                    0x46
 #define WM_WINDOWPOSCHANGED             0x0047
 #define LANG_GUJARATI                   0x47
 #define WM_POWER                        0x0048
 #define LANG_ORIYA                      0x48
+#define LANG_ODIA                       0x48
 #define LANG_TAMIL                      0x49
 #define WM_COPYDATA                     0x004A
 #define LANG_TELUGU                     0x4a
@@ -740,6 +771,7 @@
 #define VK_LWIN                         0x5B
 #define LANG_SINHALESE                  0x5b
 #define VK_RWIN                         0x5C
+#define LANG_CHEROKEE                   0x5c
 #define VK_APPS                         0x5D
 #define LANG_INUKTITUT                  0x5d
 #define LANG_AMHARIC                    0x5e
@@ -756,12 +788,16 @@
 #define VK_NUMPAD4                      0x64
 #define LANG_FILIPINO                   0x64
 #define VS_USER_DEFINED                 100
+#define WINAPI_FAMILY_DESKTOP_APP       100
 #define VK_NUMPAD5                      0x65
 #define LANG_DIVEHI                     0x65
 #define IDD_DIALOG1                     101
 #define VK_NUMPAD6                      0x66
 #define IDD_DIALOG2                     102
 #define VK_NUMPAD7                      0x67
+#define LANG_FULAH                      0x67
+#define LANG_PULAR                      0x67
+#define IDD_TLVDIALOG                   103
 #define VK_NUMPAD8                      0x68
 #define LANG_HAUSA                      0x68
 #define VK_NUMPAD9                      0x69
@@ -783,8 +819,10 @@
 #define VK_F3                           0x72
 #define VK_F4                           0x73
 #define LANG_TIGRIGNA                   0x73
+#define LANG_TIGRINYA                   0x73
 #define VK_F5                           0x74
 #define VK_F6                           0x75
+#define LANG_HAWAIIAN                   0x75
 #define VK_F7                           0x76
 #define VK_F8                           0x77
 #define VK_F9                           0x78
@@ -840,6 +878,7 @@
 #define VK_F22                          0x85
 #define WM_NCPAINT                      0x0085
 #define LANG_YAKUT                      0x85
+#define LANG_SAKHA                      0x85
 #define VK_F23                          0x86
 #define WM_NCACTIVATE                   0x0086
 #define LANG_KICHE                      0x86
@@ -855,6 +894,7 @@
 #define LANG_SCOTTISH_GAELIC            0x91
 #define VK_OEM_NEC_EQUAL                0x92
 #define VK_OEM_FJ_JISHO                 0x92
+#define LANG_CENTRAL_KURDISH            0x92
 #define VK_OEM_FJ_MASSHOU               0x93
 #define VK_OEM_FJ_TOUROKU               0x94
 #define VK_OEM_FJ_LOYA                  0x95
@@ -1114,6 +1154,7 @@
 #define WM_WTSSESSION_CHANGE            0x02B1
 #define WM_TABLET_FIRST                 0x02c0
 #define WM_TABLET_LAST                  0x02df
+#define WM_DPICHANGED                   0x02E0
 #define CF_PRIVATELAST                  0x02FF
 #define _WIN32_IE_IE30                  0x0300
 #define WM_CUT                          0x0300
@@ -1158,6 +1199,9 @@
 #define WM_DDE_FIRST                    0x03E0
 #define IDC_LIST1                       1000
 #define IDC_LSTBKMK                     1000
+#define IDC_TREE1                       1001
+#define IDC_BTNOK                       1002
+#define IDC_BTNCLOSE                    1002
 #define CF_GDIOBJLAST                   0x03FF
 #define _WIN32_WINNT_NT4                0x0400
 #define _WIN32_IE_IE40                  0x0400
@@ -1346,8 +1390,10 @@
 #define MULTIFILEOPENORD                1537
 #define _WIN32_IE_WS03                  0x0602
 #define PRINTDLGORD                     1538
+#define _WIN32_WINNT_WIN8               0x0602
 #define _WIN32_IE_IE60SP2               0x0603
 #define PRNSETUPDLGORD                  1539
+#define _WIN32_WINNT_WINBLUE            0x0603
 #define FINDDLGORD                      1540
 #define REPLACEDLGORD                   1541
 #define FONTDLGORD                      1542
@@ -1376,9 +1422,14 @@
 #define LVS_ALIGNLEFT                   0x0800
 #define TVS_INFOTIP                     0x0800
 #define TCS_RAGGEDRIGHT                 0x0800
+#define _WIN32_IE_IE90                  0x0900
 #define IDD_PLUGINGOLINE_DEMO           2500
 #define ID_GOLINE_EDIT                  2501
 #define ID_UGO_STATIC                   2505
+#define _WIN32_WINNT_WINTHRESHOLD       0x0A00
+#define _WIN32_WINNT_WIN10              0x0A00
+#define _WIN32_IE_IE100                 0x0A00
+#define _WIN32_IE_IE110                 0x0A00
 #define LVS_ALIGNMASK                   0x0c00
 #define CS_BYTEALIGNCLIENT              0x1000
 #define HDS_OVERFLOW                    0x1000
@@ -1513,9 +1564,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        103
+#define _APS_NEXT_RESOURCE_VALUE        104
 #define _APS_NEXT_COMMAND_VALUE         40001
-#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_CONTROL_VALUE         1003
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

@@ -18,7 +18,7 @@
 #ifndef RESOURCE_H
 #define RESOURCE_H
 #include <Windows.h>
-
+#include <WinUser.h>
 #ifndef IDC_STATIC
 #define IDC_STATIC	-1
 #endif

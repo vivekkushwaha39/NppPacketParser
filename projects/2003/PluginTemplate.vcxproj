@@ -19,6 +19,7 @@
     <ClInclude Include="..\..\includes\DockingFeature\GoToLineDlg.h" />
     <ClInclude Include="..\..\includes\DockingFeature\resource.h" />
     <ClInclude Include="..\..\includes\DockingFeature\StaticDialog.h" />
+    <ClInclude Include="..\..\includes\DockingFeature\TLVDialog.h" />
     <ClInclude Include="..\..\includes\DockingFeature\Window.h" />
     <ClInclude Include="..\..\includes\menuCmdID.h" />
     <ClInclude Include="..\..\includes\Notepad_plus_msgs.h" />
@@ -32,7 +33,6 @@
     <ClInclude Include="..\..\res\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\res\goLine.rc" />
     <ResourceCompile Include="..\..\res\NppPluginDemo.rc" />
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +43,7 @@
     <ClCompile Include="..\..\src\ScintillaHelper.cpp" />
     <ClCompile Include="..\..\src\StaticDialog.cpp" />
     <ClCompile Include="..\..\src\UI\FileBookmarkDialog.cpp" />
+    <ClCompile Include="..\..\src\UI\TLVDialog.cpp" />
     <ClCompile Include="..\..\src\Utils.cpp" />
     <ClCompile Include="..\..\src\VIPA\VipaParser.cpp" />
     <ClCompile Include="..\..\src\XPIPacketParser.cpp" />
@@ -56,12 +57,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -106,7 +107,8 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <CustomBuildStep>
-      <Command>bash "$(ProjectDir)..\..\postbuild.sh"</Command>
+      <Command>
+      </Command>
       <Outputs>Postbuild script;%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
