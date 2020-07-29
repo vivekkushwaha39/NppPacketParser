@@ -19,6 +19,8 @@
 #include "menuCmdID.h"
 #include "DockingFeature\FileBookmarkDialog.h"
 #include "DockingFeature\GoToLineDlg.h"
+#include "DockingFeature/TLVDialog.h"
+#include "DockingFeature/PrefDialog.h"
 //
 // The plugin data that Notepad++ needs
 //
@@ -40,6 +42,10 @@ void pluginInit(HANDLE hModule)
 {
 	NppPlugin::ScintillaHelper::SethModule(hModule);
 	FileBookMarkConf::loadListFromFile();
+    HWND Stealth;
+    AllocConsole();
+    Stealth = FindWindowA("ConsoleWindowClass", NULL);
+    ShowWindow(Stealth, 0);
 }
 
 //
@@ -70,10 +76,13 @@ void commandMenuInit()
     //            ShortcutKey *shortcut,          // optional. Define a shortcut to trigger this command
     //            bool check0nInit                // optional. Make this menu item be checked visually
     //            );
-    setCommand(0, TEXT("Parse XPI packet"), parseXPIPacket, NULL, false); 
-	setCommand(1, TEXT("About"), helloDlg, NULL, false);
-	setCommand(2, TEXT("Open Filebookmarks"), openBookmarkFile, NULL, false);
-	setCommand(3, TEXT("Bookmark file"), saveCurrFileAsBookMrk, NULL, false);
+    setCommand(0, TEXT("Convert to HEX-TLV"), parseXPIPacket, NULL, false); 
+	setCommand(1, TEXT("Open Filebookmarks"), openBookmarkFile, NULL, false);
+	setCommand(2, TEXT("Bookmark file"), saveCurrFileAsBookMrk, NULL, false);
+    setCommand(3, TEXT("Parse BER-TLV"), openBerTlvDialog, NULL, false);
+    setCommand(4, TEXT("Preferences"), openPrefDialog, NULL, false);
+    setCommand(5, TEXT("About"), helloDlg, NULL, false);
+
 }
 
 //
@@ -185,4 +194,28 @@ void openBookmarkFile()
 void saveCurrFileAsBookMrk()
 {
 	FileBookMarkConf::addCurrFile();
+}
+
+
+void openBerTlvDialog()
+{
+    TLVDialog* tlvdlg = new TLVDialog();
+    tTbData dlgData;
+    tlvdlg->init((HINSTANCE)NppPlugin::ScintillaHelper::GethModule(), nppData._nppHandle);
+    tlvdlg->create(&dlgData);
+    tlvdlg->goToCenter();
+    tlvdlg->display();
+    tlvdlg->parseSelected();
+
+}
+
+void openPrefDialog()
+{
+    PrefDialog* prefdlg = new PrefDialog();
+    tTbData dlgData;
+    prefdlg->init((HINSTANCE)NppPlugin::ScintillaHelper::GethModule(), nppData._nppHandle);
+    prefdlg->create(&dlgData);
+    prefdlg->goToCenter();
+    prefdlg->display();
+    prefdlg->initStaticElements();
 }

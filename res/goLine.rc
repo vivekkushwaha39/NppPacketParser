@@ -1,6 +1,7 @@
 // Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
+#include <windows.h>
 /////////////////////////////////////////////////////////////////////////////
 // English (United States) resources
 
@@ -13,12 +14,25 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // Dialog
 //
 
-IDD_TLVDIALOG DIALOGEX 0, 0, 327, 148
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
-FONT 8, "MS Shell Dlg", 400, 0, 0x0
+IDD_TLVDIALOG DIALOGEX 0, 0, 431, 233
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_TREE1,"SysTreeView32",WS_BORDER | WS_HSCROLL | WS_TABSTOP,6,2,314,116
-    PUSHBUTTON      "Close",IDC_BTNCLOSE,270,127,50,14
+    DEFPUSHBUTTON   "OK",IDOK,318,212,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,374,212,50,14
+    EDITTEXT        IDD_TXT_TREE,7,7,417,204,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL
+END
+
+IDD_PREF DIALOGEX 0, 0, 310, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,199,155,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,155,50,14
+    EDITTEXT        IDC_TXT_PYEX,39,7,264,14,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_LBL_PYEXEC,7,7,30,16
 END
 
 
@@ -32,9 +46,18 @@ GUIDELINES DESIGNINFO
 BEGIN
     IDD_TLVDIALOG, DIALOG
     BEGIN
-        LEFTMARGIN, 6
-        RIGHTMARGIN, 320
-        BOTTOMMARGIN, 141
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 424
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_PREF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -46,6 +69,11 @@ END
 //
 
 IDD_TLVDIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PREF AFX_DIALOG_LAYOUT
 BEGIN
     0
 END
@@ -86,39 +114,15 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,259,161,50,14
 END
 
-IDD_DIALOG2 DIALOGEX 0, 0, 316, 182
+IDD_DIALOG2 DIALOGEX 0, 0, 442, 181
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,205,161,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,259,161,50,14
-    LISTBOX         IDC_LSTBKMK,7,7,302,153,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,334,160,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,385,160,50,14
+    LISTBOX         IDC_LSTBKMK,7,7,428,153,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
 END
-
-
-#ifdef APSTUDIO_INVOKED
-/////////////////////////////////////////////////////////////////////////////
-//
-// TEXTINCLUDE
-//
-
-1 TEXTINCLUDE 
-BEGIN
-    "resource.h\0"
-END
-
-2 TEXTINCLUDE 
-BEGIN
-    "\0"
-END
-
-3 TEXTINCLUDE 
-BEGIN
-    "\0"
-END
-
-#endif    // APSTUDIO_INVOKED
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -144,11 +148,46 @@ BEGIN
     IDD_DIALOG2, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 309
+        RIGHTMARGIN, 435
         TOPMARGIN, 7
-        BOTTOMMARGIN, 175
+        BOTTOMMARGIN, 174
     END
 END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG2 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
 #endif    // APSTUDIO_INVOKED
 
 #endif    // English (India) resources

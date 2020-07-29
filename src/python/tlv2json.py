@@ -38,17 +38,30 @@ def TlvNode2Dict(tlvTree):
         _TlvNode2Dict(tlvTree, dictData)
     return dictData;
 
-if len(sys.argv) != 2:
+def printTlv2Json():
+    byteString = sys.argv[1]
+    if len(byteString) <=0:
+        exit (2)
+    bytes.fromhex(byteString)
+    fp = io.BytesIO(bytes.fromhex(byteString))
+    treedata = parse(fp, BinaryParser())
+    dictData = TlvNode2Dict(treedata)
+    print(dictData)
+    
+def printtree():
+    byteString = sys.argv[2]
+    if len(byteString) <=0:
+        exit (2)
+    bytes.fromhex(byteString)
+    fp = io.BytesIO(bytes.fromhex(byteString))
+    treedata = parse(fp, BinaryParser())
+    print(treedata.dump())
+
+if len(sys.argv) > 3:
     exit(1)
-
-byteString = sys.argv[1]
-
-if len(byteString) <=0:
-    exit (2)
-
-bytes.fromhex(byteString)
-
-fp = io.BytesIO(bytes.fromhex(byteString))
-treedata = parse(fp, BinaryParser())
-dictData = TlvNode2Dict(treedata)
-print(dictData)
+if len(sys.argv) == 3:
+    printtree()
+elif len(sys.argv) == 2:
+    printTlv2Json()
+else:
+    exit(3)

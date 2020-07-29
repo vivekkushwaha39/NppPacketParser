@@ -1,8 +1,6 @@
 #ifndef SCINTILLA_HELPER_H
 #define SCINTILLA_HELPER_H
-
-#include <string>
-#include <Windows.h>
+#include "CustomTypeDefs.h"
 namespace NppPlugin
 {
 	class ScintillaHelper
@@ -12,11 +10,11 @@ namespace NppPlugin
 	public:
 		ScintillaHelper(void);
 		~ScintillaHelper(void);
-		unsigned char GetSelectedText(std::string & );
+		static unsigned char GetSelectedText(std::string & );
 		static bool OpenFile(const std::wstring &);
 		static HANDLE GethModule(){ return ScintillaHelper::hModule; }
 		static void SethModule(HANDLE _hModule){ ScintillaHelper::hModule = _hModule; }
-		static std::wstring GetCurrFullFileName();
+		static tstring GetCurrFullFileName();
 	};
 }
 #endif /* SCINTILLA_HELPER_H */

@@ -37,10 +37,10 @@ unsigned char ScintillaHelper::GetSelectedText(string &data)
 	TextRange tr;
 	tr.chrg.cpMin = start ;
 	tr.chrg.cpMax = end;
-	tr.lpstrText = buff;
-	::SendMessage(curScintilla, SCI_GETTEXTRANGE, 0, (LPARAM) &tr);
-	data = string(buff);
-	delete buff;
+	tr.lpstrText = (char*) buff;
+	::SendMessage(curScintilla, SCI_GETSELTEXT, 0, (LPARAM) buff);
+	data = string((char*)buff);
+	delete []buff;
 	return 0;
 }
 
@@ -52,10 +52,10 @@ bool ScintillaHelper::OpenFile(const wstring &wfileName)
 	return  true;
 }
 
-wstring ScintillaHelper::GetCurrFullFileName()
+tstring ScintillaHelper::GetCurrFullFileName()
 {
 	TCHAR buffer[1024];
 	size_t buffSIZE = 1024;
 	::SendMessage(nppData._nppHandle, NPPM_GETFULLCURRENTPATH, (WPARAM)buffSIZE,(LPARAM) buffer);
-	return wstring(buffer);
+	return tstring(buffer);
 }

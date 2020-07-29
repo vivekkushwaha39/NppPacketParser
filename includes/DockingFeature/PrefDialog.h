@@ -3,12 +3,13 @@
 #include "../res/resource.h"
 #include <string>
 #include <vector>
-#include "Conf\FileBookMarkConf.h"
-class TLVDialog: public DockingDlgInterface
+
+class PrefDialog: public DockingDlgInterface
 {
 public:
-	TLVDialog() :DockingDlgInterface(IDD_TLVDIALOG)	{}
-	virtual void parseSelected();
+	PrefDialog() :DockingDlgInterface(IDD_PREF) {}
+	virtual void initStaticElements();
 protected:
 	virtual INT_PTR CALLBACK run_dlgProc(UINT message, WPARAM wParam, LPARAM lParam);
 };
+
