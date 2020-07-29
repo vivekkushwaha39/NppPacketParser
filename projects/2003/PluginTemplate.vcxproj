@@ -11,31 +11,39 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\includes\Conf\FileBookMarkConf.h" />
     <ClInclude Include="..\..\includes\DockingFeature\Docking.h" />
     <ClInclude Include="..\..\includes\DockingFeature\DockingDlgInterface.h" />
     <ClInclude Include="..\..\includes\DockingFeature\dockingResource.h" />
+    <ClInclude Include="..\..\includes\DockingFeature\FileBookmarkDialog.h" />
     <ClInclude Include="..\..\includes\DockingFeature\GoToLineDlg.h" />
     <ClInclude Include="..\..\includes\DockingFeature\resource.h" />
     <ClInclude Include="..\..\includes\DockingFeature\StaticDialog.h" />
+    <ClInclude Include="..\..\includes\DockingFeature\TLVDialog.h" />
     <ClInclude Include="..\..\includes\DockingFeature\Window.h" />
     <ClInclude Include="..\..\includes\menuCmdID.h" />
     <ClInclude Include="..\..\includes\Notepad_plus_msgs.h" />
     <ClInclude Include="..\..\includes\PluginDefinition.h" />
     <ClInclude Include="..\..\includes\PluginInterface.h" />
     <ClInclude Include="..\..\includes\Scintilla.h" />
+    <ClInclude Include="..\..\includes\ScintillaHelper.h" />
     <ClInclude Include="..\..\includes\Utils.h" />
     <ClInclude Include="..\..\includes\VIPA\VipaParser.h" />
     <ClInclude Include="..\..\includes\XPIPacketParser.h" />
+    <ClInclude Include="..\..\res\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\res\goLine.rc" />
     <ResourceCompile Include="..\..\res\NppPluginDemo.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Conf\FileBookMarkConf.cpp" />
     <ClCompile Include="..\..\src\GoToLineDlg.cpp" />
     <ClCompile Include="..\..\src\NppPluginDemo.cpp" />
     <ClCompile Include="..\..\src\PluginDefinition.cpp" />
+    <ClCompile Include="..\..\src\ScintillaHelper.cpp" />
     <ClCompile Include="..\..\src\StaticDialog.cpp" />
+    <ClCompile Include="..\..\src\UI\FileBookmarkDialog.cpp" />
+    <ClCompile Include="..\..\src\UI\TLVDialog.cpp" />
     <ClCompile Include="..\..\src\Utils.cpp" />
     <ClCompile Include="..\..\src\VIPA\VipaParser.cpp" />
     <ClCompile Include="..\..\src\XPIPacketParser.cpp" />
@@ -49,12 +57,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -74,11 +82,12 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CustomBuildAfterTargets Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build</CustomBuildAfterTargets>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\vivekk4\Documents\Visual Studio 2015\Projects\NppPacketParser\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/../../includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PLUGINTEMPLATE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -97,10 +106,15 @@
       <ImportLibrary>$(OutDir)PluginTemplate.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Outputs>Postbuild script;%(Outputs)</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\vivekk4\Documents\Visual Studio 2015\Projects\NppPacketParser\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/../../includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PLUGINTEMPLATE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
@@ -122,4 +136,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="\Users\vivek_\Documents\Visual Studio 2010\Projects\NPPPacketParser\NPPPacketParser\res\FileBookMark.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

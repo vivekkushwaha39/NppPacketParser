@@ -18,8 +18,8 @@
 #ifndef GOTILINE_DLG_H
 #define GOTILINE_DLG_H
 
-#include "DockingDlgInterface.h"
-#include "resource.h"
+#include "./DockingFeature/DockingDlgInterface.h"
+#include "./DockingFeature/resource.h"
 
 class DemoDlg : public DockingDlgInterface
 {

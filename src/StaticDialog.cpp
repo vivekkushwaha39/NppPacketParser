@@ -16,6 +16,8 @@
 //Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #include <stdio.h>
+#include <string>
+#include <sstream>
 #include "../includes/DockingFeature/StaticDialog.h"
 
 void StaticDialog::goToCenter()

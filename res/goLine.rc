@@ -1,24 +1,70 @@
-/*
-this file is part of notepad++
-Copyright (C)2003 Don HO ( donho@altern.org )
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
 
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either
-version 2 of the License, or (at your option) any later version.
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
 
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-*/
+IDD_TLVDIALOG DIALOGEX 0, 0, 327, 148
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE1,"SysTreeView32",WS_BORDER | WS_HSCROLL | WS_TABSTOP,6,2,314,116
+    PUSHBUTTON      "Close",IDC_BTNCLOSE,270,127,50,14
+END
 
-#include <windows.h>
-#include "../includes/DockingFeature/resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_TLVDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 320
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_TLVDIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (India) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENN)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_INDIA
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
 
 IDD_PLUGINGOLINE_DEMO DIALOGEX 26, 41, 223, 67
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
@@ -26,8 +72,86 @@ EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE
 CAPTION "Go To Line #"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    LTEXT           "Go to line :", ID_UGO_STATIC,5,21,95,8
-    EDITTEXT        ID_GOLINE_EDIT, 55,20,30,12,ES_NUMBER
+    LTEXT           "Go to line :",ID_UGO_STATIC,5,21,95,8
+    EDITTEXT        ID_GOLINE_EDIT,55,20,30,12,ES_NUMBER
     DEFPUSHBUTTON   "&Go",IDOK,100,21,70,14,BS_NOTIFY
 END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,161,50,14
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,161,50,14
+    LISTBOX         IDC_LSTBKMK,7,7,302,153,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PLUGINGOLINE_DEMO, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (India) resources
+/////////////////////////////////////////////////////////////////////////////
+
 
