@@ -29,7 +29,7 @@
 //-------------------------------------//
 // Here define your plugin name
 //
-const TCHAR NPP_PLUGIN_NAME[] = TEXT("XPI Packet Parser");
+const TCHAR NPP_PLUGIN_NAME[] = TEXT("TLV Utils");
 
 //-----------------------------------------------//
 //-- STEP 2. DEFINE YOUR PLUGIN COMMAND NUMBER --//
@@ -37,7 +37,7 @@ const TCHAR NPP_PLUGIN_NAME[] = TEXT("XPI Packet Parser");
 //
 // Here define the number of your plugin commands
 //
-const int nbFunc = 4;
+const int nbFunc = 6;
 
 
 //
@@ -78,4 +78,6 @@ void helloDlg();
 void parseXPIPacket();
 void openBookmarkFile();
 void saveCurrFileAsBookMrk();
+void openBerTlvDialog();
+void openPrefDialog();
 #endif //PLUGINDEFINITION_H

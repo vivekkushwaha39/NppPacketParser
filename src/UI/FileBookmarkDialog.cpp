@@ -19,7 +19,16 @@ INT_PTR CALLBACK FileBookmarkDialog::run_dlgProc(UINT message, WPARAM wParam, LP
 					FileBookmarkDialog::openSelectedFile();
 					delete this;
 					return TRUE;
+					break;
+
 				}
+				case IDCANCEL:
+				{
+					delete this;
+					return TRUE;
+					break;
+				}
+
 			}
 				return FALSE;
 		}
